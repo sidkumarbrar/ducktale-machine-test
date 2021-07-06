@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="Name" formControlName="name" required />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input
+      matInput
+      placeholder="Description"
+      formControlName="description"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Repeating</mat-label>
+    <select matNativeControl formControlName="repeating" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </mat-form-field>
+</form>
+
+<app-to-do-list-component [tasks]="tasks"></app-to-do-list-component>
